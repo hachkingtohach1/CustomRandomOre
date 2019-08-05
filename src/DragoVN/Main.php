@@ -95,12 +95,12 @@ class Main extends PluginBase implements Listener{
                 $fence = true;
             }
             if ($water || $fence) {
-                $id = mt_rand(1, 30);
+                $id = mt_rand(1, 50);
                 switch ($id) {
                     case $this->config->get("Random-one");
                            $newBlock = new Cobblestone();               
                         break;
-					case $this->config->get("Random-two");
+		    case $this->config->get("Random-two");
                            $newBlock = new IronOre();
                         break;
                     case $this->config->get("Random-three");
