@@ -11,9 +11,6 @@ One Plugin CustomRandomOre by DragoVN.
 # Configuratio File
 ```yaml
 ---
-# degrees out your optional blocks. #
-# Random int: 1 -> 30 #
-# Note that this value must not be ignored or omitted because it is very important. #
 Random-one: 2 #Cobblestone
 Random-two: 5 #IronOre
 Random-three: 7 #GoldOre
@@ -26,7 +23,6 @@ Random-nine: 20 #Quartz
 Random-ten: 24 #Coal
 Random-eleven: 27 #Emerald
 
-# Vip RandomOre. #
 Permission_vip: randomore.vip
 ...
 ```
