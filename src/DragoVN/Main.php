@@ -67,11 +67,11 @@ use pocketmine\block\RedstoneOre;
 use pocketmine\block\Quartz;
 use pocketmine\block\Coal;
 use pocketmine\block\Emerald;
-use pocketmine\block\Bedrock;
+use pocketmine\block\Bookshelf;
 
 class Main extends PluginBase implements Listener{
     
-	//---------------------------------------------------------------------------------
+	    //---------------------------------------------------------------------------------
         public function onEnable(){
 		  $this->initConfig();
 		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
@@ -79,15 +79,13 @@ class Main extends PluginBase implements Listener{
 		  $this->getLogger()->info(TextFormat::AQUA . "Thanks for using! You are using version: 1.0");
 		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
 		  $this->getLogger()->info(TextFormat::YELLOW . "Raw materials for making machines are:");
-		  $this->getLogger()->info(TextFormat::AQUA . "Water and Lava");
-		  $this->getLogger()->info(TextFormat::AQUA . "Water and Fence");
-		  $this->getLogger()->info(TextFormat::AQUA . "Lava and Bedrock");
+		  $this->getLogger()->info(TextFormat::AQUA . "Water, Lava, Fence");
 		  
 	  $this->EconomyAPI = $this->getServer()->getPluginManager()->getPlugin('EconomyAPI');
           $this->getServer()->getPluginManager()->registerEvents($this,$this);
 		}
         //---------------------------------------------------------------------------------
-	public function initConfig(){
+	    public function initConfig(){
           if(!file_exists($this->getDataFolder())){
              @mkdir($this->getDataFolder());
 		  }
@@ -95,13 +93,13 @@ class Main extends PluginBase implements Listener{
                $this->saveResource("config.yml");
 			}
                $this->config = new Config($this->getDataFolder()."config.yml", Config::YAML);
-	}
+		}
         //---------------------------------------------------------------------------------
         public function RandomBlockOne(BlockUpdateEvent $event){
           $block = $event->getBlock();
           $water = false;
           $fence = false;
-        for ($i = 2; $i <= 5; $i++) {
+         for ($i = 2; $i <= 5; $i++) {
             $nearBlock = $block->getSide($i);
             if ($nearBlock instanceof Water) {
                 $water = true;
@@ -214,7 +212,7 @@ class Main extends PluginBase implements Listener{
 	public function RandomBlockVip(BlockUpdateEvent $event){
           $block = $event->getBlock();
           $lava = false;
-          $bedrock = false;
+          $bookshelf = false;
 		  $player = [];
 	 if ($player instanceof Player){
 	  if(!$player->hasPermission($this->config->get("Permission_vip"))){
@@ -224,10 +222,10 @@ class Main extends PluginBase implements Listener{
             $nearBlock = $block->getSide($i);
             if ($nearBlock instanceof Lava) {
                 $lava = true;
-            } else if ($nearBlock instanceof Bedrock) {
-                $bedrock = true;
+            } else if ($nearBlock instanceof Bookshelf) {
+                $bookshelf = true;
             }
-            if ($lava || $bedrock) {
+            if ($lava || $bookshelf) {
                 $id = mt_rand(1, 30);
                 switch ($id) {
                     case $this->config->get("Random-one");
