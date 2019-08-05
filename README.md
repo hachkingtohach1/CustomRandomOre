@@ -9,29 +9,21 @@ One Plugin CustomRandomOre by DragoVN.
 - Lava and Bedrock
 # Configuratio File
 ```yaml
-## DO NOT TOUCH THIS
-version: 1.3.0
-prefix: "&f[&6OreGen&e3&f]"
+# degrees out your optional blocks. #
+# Random int: 1 -> 30 #
+# Note that this value must not be ignored or omitted because it is very important. #
+Random-one: 2 #Cobblestone
+Random-two: 5 #IronOre
+Random-three: 7 #GoldOre
+Random-four: 9 #EmeraldOre
+Random-five: 10 #CoalOre
+Random-six: 14 #RedstoneOre
+Random-seven: 17 #DiamondOre
+Random-eight: 19 #LapisOre
+Random-nine: 20 #Quartz
+Random-ten: 24 #Coal
+Random-eleven: 27 #Emerald
 
-# Enabling which format should Oregen generate ore
-# waterBlock: Block + Water
-# lavaBlock: Lava + Block
-# waterLava: Water + Lava
-mode:
-  waterBlock: true
-  lavaBlock: false
-  waterLava: true
-
-#Compatible block depending on the mode
-blocks:
-- FENCE
-- ACACIA_FENCE
-- BIRCH_FENCE
-- DARK_OAK_FENCE
-- IRON_FENCE
-
-#Disabled worlds
-disabledWorlds:
-- world
-- ASkyBlock
+# Vip RandomOre. #
+Permission_vip: randomore.vip
 ```
