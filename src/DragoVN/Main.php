@@ -56,7 +56,6 @@ use pocketmine\block\Block;
 use pocketmine\block\Cobblestone;
 use pocketmine\block\Fence;
 use pocketmine\block\Water;
-use pocketmine\block\Lava;
 use pocketmine\block\IronOre;
 use pocketmine\block\DiamondOre;
 use pocketmine\block\EmeraldOre;
@@ -67,7 +66,6 @@ use pocketmine\block\RedstoneOre;
 use pocketmine\block\Quartz;
 use pocketmine\block\Coal;
 use pocketmine\block\Emerald;
-use pocketmine\block\Bookshelf;
 
 class Main extends PluginBase implements Listener{
     
@@ -75,12 +73,13 @@ class Main extends PluginBase implements Listener{
         public function onEnable(){
 		  $this->initConfig();
 		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
-                  $this->getLogger()->info(TextFormat::GREEN . "Plugin by DragoVN!");
+          $this->getLogger()->info(TextFormat::GREEN . "Plugin by DragoVN!");
 		  $this->getLogger()->info(TextFormat::AQUA . "Thanks for using! You are using version: 1.0");
 		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
 		  $this->getLogger()->info(TextFormat::YELLOW . "Raw materials for making machines are:");
-		  $this->getLogger()->info(TextFormat::AQUA . "Water, Lava, Fence");
-                  $this->getServer()->getPluginManager()->registerEvents($this,$this);
+		  $this->getLogger()->info(TextFormat::AQUA . "Water and Fence");
+		  
+          $this->getServer()->getPluginManager()->registerEvents($this,$this);
 		}
         //---------------------------------------------------------------------------------
 	    public function initConfig(){
@@ -151,3 +150,4 @@ class Main extends PluginBase implements Listener{
     }
 }
 ?>
+
