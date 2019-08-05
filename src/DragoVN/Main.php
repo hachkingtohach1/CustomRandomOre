@@ -41,10 +41,6 @@ use pocketmine\utils\Config;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 
-// Commands //
-use pocketmine\command\Command;
-use pocketmine\command\CommandSender;
-
 // Events //
 use pocketmine\event\block\BlockUpdateEvent;
 
