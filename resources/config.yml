@@ -3,14 +3,14 @@
 # Random int: 1 -> 50 #
 # Note that this value must not be ignored or omitted because it is very important. #
 Random-one: 2 #Cobblestone
-Random-two: 5 #IronOre
-Random-three: 7 #GoldOre
-Random-four: 9 #EmeraldOre
-Random-five: 10 #CoalOre
-Random-six: 14 #RedstoneOre
-Random-seven: 17 #DiamondOre
-Random-eight: 19 #LapisOre
-Random-nine: 20 #Quartz
-Random-ten: 24 #Coal
-Random-eleven: 27 #Emerald
+Random-two: 10 #IronOre
+Random-three: 17 #GoldOre
+Random-four: 23 #EmeraldOre
+Random-five: 25 #CoalOre
+Random-six: 30 #RedstoneOre
+Random-seven: 32 #DiamondOre
+Random-eight: 36 #LapisOre
+Random-nine: 43 #Quartz
+Random-ten: 41 #Coal
+Random-eleven: 46 #Emerald
 ...
