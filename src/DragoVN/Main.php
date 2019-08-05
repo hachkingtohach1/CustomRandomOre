@@ -83,10 +83,11 @@ class Main extends PluginBase implements Listener{
 		  $this->getLogger()->info(TextFormat::AQUA . "Water and Fence");
 		  $this->getLogger()->info(TextFormat::AQUA . "Lava and Bedrock");
 		  
+	  $this->EconomyAPI = $this->getServer()->getPluginManager()->getPlugin('EconomyAPI');
           $this->getServer()->getPluginManager()->registerEvents($this,$this);
 		}
 		//---------------------------------------------------------------------------------
-		public function initConfig(){
+	public function initConfig(){
           if(!file_exists($this->getDataFolder())){
              @mkdir($this->getDataFolder());
 		  }
@@ -94,7 +95,7 @@ class Main extends PluginBase implements Listener{
                $this->saveResource("config.yml");
 			}
                $this->config = new Config($this->getDataFolder()."config.yml", Config::YAML);
-		}		
+		}
         //---------------------------------------------------------------------------------
         public function RandomBlockOne(BlockUpdateEvent $event){
           $block = $event->getBlock();
