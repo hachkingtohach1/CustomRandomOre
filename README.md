@@ -9,6 +9,7 @@ One Plugin CustomRandomOre by DragoVN.
 - Lava and Bedrock
 >>----------------------------------------<<
 # Configuratio File
+```yaml
 ---
 # degrees out your optional blocks. #
 # Random int: 1 -> 30 #
@@ -28,3 +29,4 @@ Random-eleven: 27 #Emerald
 # Vip RandomOre. #
 Permission_vip: randomore.vip
 ...
+```
