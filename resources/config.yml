@@ -1,0 +1,19 @@
+---
+# degrees out your optional blocks. #
+# Random int: 1 -> 30 #
+# Note that this value must not be ignored or omitted because it is very important. #
+Random-one: 2 #Cobblestone
+Random-two: 5 #IronOre
+Random-three: 7 #GoldOre
+Random-four: 9 #EmeraldOre
+Random-five: 10 #CoalOre
+Random-six: 14 #RedstoneOre
+Random-seven: 17 #DiamondOre
+Random-eight: 19 #LapisOre
+Random-nine: 20 #Quartz
+Random-ten: 24 #Coal
+Random-eleven: 27 #Emerald
+
+# Vip RandomOre. #
+Permission_vip: randomore.vip
+...
