@@ -71,7 +71,7 @@ use pocketmine\block\Bedrock;
 
 class Main extends PluginBase implements Listener{
     
-	    //---------------------------------------------------------------------------------
+	//---------------------------------------------------------------------------------
         public function onEnable(){
 		  $this->initConfig();
 		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
@@ -86,7 +86,7 @@ class Main extends PluginBase implements Listener{
 	  $this->EconomyAPI = $this->getServer()->getPluginManager()->getPlugin('EconomyAPI');
           $this->getServer()->getPluginManager()->registerEvents($this,$this);
 		}
-		//---------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------
 	public function initConfig(){
           if(!file_exists($this->getDataFolder())){
              @mkdir($this->getDataFolder());
@@ -95,7 +95,7 @@ class Main extends PluginBase implements Listener{
                $this->saveResource("config.yml");
 			}
                $this->config = new Config($this->getDataFolder()."config.yml", Config::YAML);
-		}
+	}
         //---------------------------------------------------------------------------------
         public function RandomBlockOne(BlockUpdateEvent $event){
           $block = $event->getBlock();
