@@ -34,3 +34,4 @@ blocks:
 disabledWorlds:
 - world
 - ASkyBlock
+```
