@@ -48,6 +48,9 @@ use pocketmine\command\CommandSender;
 // Events //
 use pocketmine\event\block\BlockUpdateEvent;
 
+//utils
+use pocketmine\utils\TextFormat;
+
 // Blocks //
 use pocketmine\block\Block;
 use pocketmine\block\Cobblestone;
@@ -71,14 +74,14 @@ class Main extends PluginBase implements Listener{
 	    //---------------------------------------------------------------------------------
         public function onEnable(){
 		  $this->initConfig();
-		  $this->getLogger()->info("§f§r§6------------------------------");
-          $this->getLogger()->info("§f§r§aPlugin by DragoVN!");
-		  $this->getLogger()->info("§f§r§bThanks for using! You are using version: 1.0");
-		  $this->getLogger()->info("§f§r§6------------------------------");
-		  $this->getLogger()->info("§f§r§5Raw materials for making machines are:");
-		  $this->getLogger()->info("§f§r§bWater and Lava");
-		  $this->getLogger()->info("§f§r§bWater and Fence");
-		  $this->getLogger()->info("§f§r§bLava and Bedrock");
+		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
+                  $this->getLogger()->info(TextFormat::GREEN . "Plugin by DragoVN!");
+		  $this->getLogger()->info(TextFormat::AQUA . "Thanks for using! You are using version: 1.0");
+		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
+		  $this->getLogger()->info(TextFormat::YELLOW . "Raw materials for making machines are:");
+		  $this->getLogger()->info(TextFormat::AQUA . "Water and Lava");
+		  $this->getLogger()->info(TextFormat::AQUA . "Water and Fence");
+		  $this->getLogger()->info(TextFormat::AQUA . "Lava and Bedrock");
 		  
           $this->getServer()->getPluginManager()->registerEvents($this,$this);
 		}
