@@ -10,16 +10,16 @@ One Plugin CustomRandomOre by DragoVN.
 # Configuratio File
 ```yaml
 ---
- Random-one: 2 #Cobblestone
- Random-two: 5 #IronOre
- Random-three: 7 #GoldOre
- Random-four: 9 #EmeraldOre
- Random-five: 10 #CoalOre
- Random-six: 14 #RedstoneOre
- Random-seven: 17 #DiamondOre
- Random-eight: 19 #LapisOre
- Random-nine: 20 #Quartz
- Random-ten: 24 #Coal
- Random-eleven: 27 #Emerald
+ Random-one: 2 
+ Random-two: 5 
+ Random-three: 7 
+ Random-four: 9 
+ Random-five: 10 
+ Random-six: 14 
+ Random-seven: 17 
+ Random-eight: 19 
+ Random-nine: 20 
+ Random-ten: 24 
+ Random-eleven: 27 
 
  Permission_vip: randomore.vip
