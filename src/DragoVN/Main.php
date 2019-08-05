@@ -71,7 +71,8 @@ class Main extends PluginBase implements Listener{
     
 	    //---------------------------------------------------------------------------------
         public function onEnable(){
-		  $this->initConfig();
+		  $this->saveResource("config.yml");
+		  $this->config = new Config($this->getDataFolder()."config.yml", Config::YAML);
 		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
           $this->getLogger()->info(TextFormat::GREEN . "Plugin by DragoVN!");
 		  $this->getLogger()->info(TextFormat::AQUA . "Thanks for using! You are using version: 1.0");
@@ -82,21 +83,11 @@ class Main extends PluginBase implements Listener{
           $this->getServer()->getPluginManager()->registerEvents($this,$this);
 		}
         //---------------------------------------------------------------------------------
-	    public function initConfig(){
-          if(!file_exists($this->getDataFolder())){
-             @mkdir($this->getDataFolder());
-		  }
-            if(!is_file($this->getDataFolder()."config.yml")){
-               $this->saveResource("config.yml");
-			}
-               $this->config = new Config($this->getDataFolder()."config.yml", Config::YAML);
-		}
-        //---------------------------------------------------------------------------------
         public function RandomBlockOne(BlockUpdateEvent $event){
           $block = $event->getBlock();
           $water = false;
           $fence = false;
-         for ($i = 2; $i <= 4; $i++) {
+         for ($i = 2; $i <= 5; $i++) {
             $nearBlock = $block->getSide($i);
             if ($nearBlock instanceof Water) {
                 $water = true;
