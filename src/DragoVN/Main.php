@@ -269,8 +269,8 @@ class Main extends PluginBase implements Listener{
                 }
                 $block->getLevel()->setBlock($block, $newBlock, true, false);
                 return;
-            }
-		}
+	    }
+	}
 	 }
 	}
 }
