@@ -1,6 +1,6 @@
 ---
 # degrees out your optional blocks. #
-# Random int: 1 -> 30 #
+# Random int: 1 -> 50 #
 # Note that this value must not be ignored or omitted because it is very important. #
 Random-one: 2 #Cobblestone
 Random-two: 5 #IronOre
