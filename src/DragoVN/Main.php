@@ -96,7 +96,7 @@ class Main extends PluginBase implements Listener{
           $block = $event->getBlock();
           $water = false;
           $fence = false;
-         for ($i = 2; $i <= 5; $i++) {
+         for ($i = 2; $i <= 4; $i++) {
             $nearBlock = $block->getSide($i);
             if ($nearBlock instanceof Water) {
                 $water = true;
