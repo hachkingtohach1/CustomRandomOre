@@ -24,5 +24,4 @@ Random-ten: 24 #Coal
 Random-eleven: 27 #Emerald
 
 Permission_vip: randomore.vip
-...
 ```
