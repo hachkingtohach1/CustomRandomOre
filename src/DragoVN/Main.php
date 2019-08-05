@@ -75,14 +75,12 @@ class Main extends PluginBase implements Listener{
         public function onEnable(){
 		  $this->initConfig();
 		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
-          $this->getLogger()->info(TextFormat::GREEN . "Plugin by DragoVN!");
+                  $this->getLogger()->info(TextFormat::GREEN . "Plugin by DragoVN!");
 		  $this->getLogger()->info(TextFormat::AQUA . "Thanks for using! You are using version: 1.0");
 		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
 		  $this->getLogger()->info(TextFormat::YELLOW . "Raw materials for making machines are:");
 		  $this->getLogger()->info(TextFormat::AQUA . "Water, Lava, Fence");
-		  
-	      $this->EconomyAPI = $this->getServer()->getPluginManager()->getPlugin('EconomyAPI');
-          $this->getServer()->getPluginManager()->registerEvents($this,$this);
+                  $this->getServer()->getPluginManager()->registerEvents($this,$this);
 		}
         //---------------------------------------------------------------------------------
 	    public function initConfig(){
@@ -151,125 +149,5 @@ class Main extends PluginBase implements Listener{
             }
         }
     }
-	//---------------------------------------------------------------------------------
-	public function RandomBlockTwo(BlockUpdateEvent $event){
-          $block = $event->getBlock();
-          $lava = false;
-          $water = false;
-        for ($i = 2; $i <= 5; $i++) {
-            $nearBlock = $block->getSide($i);
-            if ($nearBlock instanceof Lava) {
-                $lava = true;
-            } else if ($nearBlock instanceof Water) {
-                $water = true;
-            }
-            if ($lava || $water) {
-                $id = mt_rand(1, 30);
-                switch ($id) {
-                    case $this->config->get("Random-one");
-                           $newBlock = new Cobblestone();               
-                        break;
-					case $this->config->get("Random-two");
-                           $newBlock = new IronOre();
-                        break;
-                    case $this->config->get("Random-three");
-                           $newBlock = new GoldOre();
-                        break;
-                    case $this->config->get("Random-four");
-                           $newBlock = new EmeraldOre();
-                        break;
-                    case $this->config->get("Random-five");
-                           $newBlock = new CoalOre();
-                        break;
-                    case $this->config->get("Random-six");
-                           $newBlock = new RedstoneOre();
-                        break;
-                    case $this->config->get("Random-seven");
-                           $newBlock = new DiamondOre();
-                        break;
-					case $this->config->get("Random-eight");
-                           $newBlock = new LapisOre();
-                        break;
-                    case $this->config->get("Random-nine");
-                           $newBlock = new Quartz();
-                        break;
-					case $this->config->get("Random-ten");
-                           $newBlock = new Coal();
-                        break;
-					case $this->config->get("Random-eleven");
-                           $newBlock = new Emerald();
-                        break;
-                    default:
-                        $newBlock = new Cobblestone();
-						
-                }
-                $block->getLevel()->setBlock($block, $newBlock, true, false);
-                return;
-            }
-        }
-    }	
-	//---------------------------------------------------------------------------------
-	public function RandomBlockVip(BlockUpdateEvent $event){
-          $block = $event->getBlock();
-          $lava = false;
-          $bookshelf = false;
-		  $player = [];
-	 if ($player instanceof Player){
-	  if(!$player->hasPermission($this->config->get("Permission_vip"))){
-		  return;
-	  }
-        for ($i = 2; $i <= 5; $i++) {
-            $nearBlock = $block->getSide($i);
-            if ($nearBlock instanceof Lava) {
-                $lava = true;
-            } else if ($nearBlock instanceof Bookshelf) {
-                $bookshelf = true;
-            }
-            if ($lava || $bookshelf) {
-                $id = mt_rand(1, 30);
-                switch ($id) {
-                    case $this->config->get("Random-one");
-                           $newBlock = new Cobblestone();               
-                        break;
-					case $this->config->get("Random-two");
-                           $newBlock = new IronOre();
-                        break;
-                    case $this->config->get("Random-three");
-                           $newBlock = new GoldOre();
-                        break;
-                    case $this->config->get("Random-four");
-                           $newBlock = new EmeraldOre();
-                        break;
-                    case $this->config->get("Random-five");
-                           $newBlock = new CoalOre();
-                        break;
-                    case $this->config->get("Random-six");
-                           $newBlock = new RedstoneOre();
-                        break;
-                    case $this->config->get("Random-seven");
-                           $newBlock = new DiamondOre();
-                        break;
-					case $this->config->get("Random-eight");
-                           $newBlock = new LapisOre();
-                        break;
-                    case $this->config->get("Random-nine");
-                           $newBlock = new Quartz();
-                        break;
-					case $this->config->get("Random-ten");
-                           $newBlock = new Coal();
-                        break;
-					case $this->config->get("Random-eleven");
-                           $newBlock = new Emerald();
-                        break;
-                    default:
-                        $newBlock = new Emerald();
-						
-                }
-                $block->getLevel()->setBlock($block, $newBlock, true, false);
-                return;
-	    }
-	}
-	 }
-	}
 }
 ?>
