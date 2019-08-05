@@ -75,13 +75,13 @@ class Main extends PluginBase implements Listener{
         public function onEnable(){
 		  $this->initConfig();
 		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
-                  $this->getLogger()->info(TextFormat::GREEN . "Plugin by DragoVN!");
+          $this->getLogger()->info(TextFormat::GREEN . "Plugin by DragoVN!");
 		  $this->getLogger()->info(TextFormat::AQUA . "Thanks for using! You are using version: 1.0");
 		  $this->getLogger()->info(TextFormat::GOLD . "------------------------------");
 		  $this->getLogger()->info(TextFormat::YELLOW . "Raw materials for making machines are:");
 		  $this->getLogger()->info(TextFormat::AQUA . "Water, Lava, Fence");
 		  
-	  $this->EconomyAPI = $this->getServer()->getPluginManager()->getPlugin('EconomyAPI');
+	      $this->EconomyAPI = $this->getServer()->getPluginManager()->getPlugin('EconomyAPI');
           $this->getServer()->getPluginManager()->registerEvents($this,$this);
 		}
         //---------------------------------------------------------------------------------
